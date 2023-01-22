@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/pic-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../public/style.css" />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <script defer src="../src/app.js" type="module"></script>
+
+    <title>Slide Show - App</title>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-xxl navbar-light bg-light fw-bold"
+        aria-label="Seventh navbar example"
+      >
+        <div class="container-fluid">
+          <span class="navbar-brand cursor" id="home-link">Главная</span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSlideshow"
+            aria-controls="navbarSlideshow"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- ! Nav Links -->
+          <div class="collapse navbar-collapse" id="navbarSlideshow">
+            <ul
+              class="navbar-nav me-auto mb-2 mb-xl-0 justify-content-between"
+              style="width: -webkit-fill-available"
+            >
+              <li class="nav-item">
+                <span class="nav-link active cursor" id="master-class-page-link"
+                  >Мастер-Классы</span
+                >
+              </li>
+              <li class="nav-item">
+                <span class="nav-link active cursor" id="about-page-link"
+                  >Биография</span
+                >
+              </li>
+              <li class="nav-item">
+                <span class="nav-link active cursor" id="articles-page-link"
+                  >Статьи</span
+                >
+              </li>
+              <li class="nav-item">
+                <span class="nav-link active cursor" id="books-page-link"
+                  >Книги</span
+                >
+              </li>
+              <li class="nav-item">
+                <span class="nav-link active cursor" id="schedule-page-link"
+                  >Расписание</span
+                >
+              </li>
+              <li class="nav-item">
+                <span class="nav-link active cursor" id="comments-page-link"
+                  >Отзывы</span
+                >
+              </li>
+              <li class="nav-item">
+                <span class="nav-link active cursor" id="contacts-page-link"
+                  >Контакты</span
+                >
+              </li>
+              <li class="nav-item">
+                <span class="nav-link active cursor" id="film-vibe-page-link"
+                  >Фильм Vibe</span
+                >
+              </li>
+              <li class="nav-item">
+                <span
+                  class="nav-link active cursor"
+                  id="online-project-page-link"
+                  >Онлайн-Проект</span
+                >
+              </li>
+              <li class="nav-item me-auto">
+                <span class="nav-link active cursor" id="create-pic-page-link"
+                  >Add Pic</span
+                >
+              </li>
+              <li class="nav-item">
+                <span class="nav-link active cursor" id="login-page-link"
+                  >Login</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!--! דף הבית -->
+      <div id="home-page" class="d-block">
+        <!--! הכותרת של דף הבית -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="home-page-title" class="text-xl-start display-4 fw-bold">
+              Ирина <br />Хакамада
+            </h1>
+            <h2 id="home-page-subtitle" class="fs-5">
+              ❞ Как бы ни были велики силы, противостоящие тебе, самое главное
+              —<br />
+              быть абсолютно к ним равнодушным и
+              <span class="fw-bold">ДЕЛАТЬ СВОЕ ДЕЛО</span>. Если ты<br />
+              будешь на них постоянно оглядываться, пытаться скорректировать
+              свои<br />
+              шаги, бояться или представлять в воображении свое поражение, —
+              ты<br />
+              никогда своей цели не достигнешь.
+            </h2>
+            <div><h4>Расписание мастер-классов</h4></div>
+          </div>
+        </div>
+        <!--! מצגת תמונות -->
+        <div class="center">
+          <div class="col-12 col-md-10 col-xl-8">
+            <figure>
+              <img
+                src="https://i0.wp.com/hakamada.ru/wp-content/uploads/2017/10/zbwmzhcldwfeskkgh7w3wn0i4xu-1.jpeg"
+                alt="beach"
+                class="img-fluid efrat"
+                id="slider-image"
+              />
+              <!-- <h1>Энергия: зарождение и управление</h1> -->
+
+              <figcaption class="figcaption">
+                Photographed by: <span id="slider-credits">Roman</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="center mb-4">
+          <div id="slider-prev-btn" class="btn btn-outline-dark mx-2 cursor">
+            Prev
+          </div>
+          <div id="slider-next-btn" class="btn btn-outline-dark mx-2 cursor">
+            Next
+          </div>
+        </div>
+      </div>
+      <!--! Master Class Page-->
+      <div id="master-class-page" class="d-none">
+        <!--! Title of the page -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="master-class-title" class="text-center display-4">
+              Мастер-Классы
+            </h1>
+            <h2 id="master-class-subtitle" class="fs-5"></h2>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <!--! דף אודות -->
+      <div id="about-page" class="d-none">
+        <!-- !Div for Picture -->
+        <div class="about_pic"></div>
+        <!--! הכותרת של דף הבית -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="about-page-title" class="text-center display-4">
+              Биография
+            </h1>
+            <h2 id="about-page-subtitle" class="fs-5">Here you can pictures</h2>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <!--! Articles Page -->
+      <div id="articles-page" class="d-none">
+        <!--! Title of the page -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="articles-title" class="text-center display-4">Статьи</h1>
+            <h2 id="articles-subtitle" class="fs-5"></h2>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <!--! Books Page -->
+      <div id="books-page" class="d-none">
+        <!--! Title of the page -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="books-title" class="text-center display-4">Книги</h1>
+            <h2 id="books-subtitle" class="fs-5"></h2>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <!--! =Schedule Page -->
+      <div id="schedule-page" class="d-none">
+        <!--! Title of the page -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="schedule-title" class="text-center display-4">
+              Расписание
+            </h1>
+            <h2 id="schedule-subtitle" class="fs-5"></h2>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <!--! comments Page -->
+      <div id="comments-page" class="d-none">
+        <!--! Title of the page -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="comments-title" class="text-center display-4">
+              Комментарии
+            </h1>
+            <h2 id="comments-subtitle" class="fs-5"></h2>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <!--! Contacts Page -->
+      <div id="contacts-page" class="d-none">
+        <!--! Title of the page -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="contacts-title" class="text-center display-4">Контакты</h1>
+            <h2 id="contacts-subtitle" class="fs-5"></h2>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <!--! Film Vibe Page -->
+      <div id="film-vibe-page" class="d-none">
+        <!--! Title of the page -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="film-vibe-title" class="text-center display-4">
+              Фильм Вайб
+            </h1>
+            <h2 id="film-vibe-subtitle" class="fs-5"></h2>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <!--! Online Project Page -->
+      <div id="online-project-page" class="d-none">
+        <!--! Title of the page -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="online-project-title" class="text-center display-4">
+              Онлайн Проект
+            </h1>
+            <h2 id="online-project-subtitle" class="fs-5"></h2>
+            <hr />
+          </div>
+        </div>
+      </div>
+
+      <!--! דף יצירת תמונה -->
+      <div id="create-pic-page" class="d-none">
+        <!--! הכותרת של דף הבית -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="create-pic-title" class="text-center display-4">
+              CREATE PIC PAGE
+            </h1>
+            <h2 id="create-pic-subtitle" class="fs-5">Here you can pictures</h2>
+            <hr />
+          </div>
+        </div>
+        <div class="center">
+          <form class="col-12 col-md-10 col-xl-8">
+            <!-- ! url field -->
+            <div>
+              <label for="url-field">Url</label>
+              <input
+                type="url"
+                class="form-control mb2"
+                name="url"
+                id="url-field"
+                minlength="2"
+              />
+              <span id="url-error-span" class="text-danger"></span>
+            </div>
+            <!-- ! alt field -->
+            <div>
+              <label for="alt-field">Alt</label>
+              <input
+                type="text"
+                class="form-control mb2"
+                name="alt"
+                id="alt-field"
+                minlength="2"
+              />
+              <span id="alt-error-span" class="text-danger"></span>
+            </div>
+            <!-- ! credit field -->
+            <div>
+              <label for="credit-field">Credit</label>
+              <input
+                type="text"
+                class="form-control mb2"
+                name="credit"
+                id="credit-field"
+                minlength="2"
+              />
+              <span id="credit-error-span" class="text-danger"></span>
+            </div>
+            <!-- ! price field -->
+            <div>
+              <label for="price-field">Price</label>
+              <input
+                type="number"
+                class="form-control mb2"
+                name="price"
+                id="price-field"
+                minlength="2"
+              />
+              <span id="price-error-span" class="text-danger"></span>
+            </div>
+            <!-- ! submit button -->
+            <input
+              type="button"
+              id="submit-create-pic-btn"
+              value="Submit"
+              class="btn btn-primary col-12 mb-2"
+              disabled
+            />
+            <!-- ! cancel button -->
+            <input
+              type="button"
+              id="cancel-create-pic-btn"
+              value="Cancel"
+              class="btn btn-outline-danger col-12 mb-2"
+            />
+          </form>
+        </div>
+      </div>
+      <!--! דף התחברות -->
+      <div id="login-page" class="d-none">
+        <!--! הכותרת של דף הבית -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="login-title" class="text-center display-4">
+              LOGIN PIC PAGE
+            </h1>
+            <h2 id="login-subtitle" class="fs-5">Here you can pictures</h2>
+            <hr />
+          </div>
+        </div>
+      </div>
+
+      <!--! דף שגיאה 404 -->
+      <div id="error-404-page" class="d-none">
+        <!-- הכותרת של דף הבית -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="about-page-title" class="text-center display-4">
+              ERROR 404
+            </h1>
+            <h2 id="about-page-subtitle" class="fs-5">Page not found</h2>
+            <hr />
+            <p id="return-to-home-page-link" class="cursor text-primary">
+              click to return to home page
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="border-top pt-3 bg-dark center">
+      <p class="text-light">Created & Designed By Roman Amiraslanov &copy;</p>
+    </footer>
+  </body>
+</html>
